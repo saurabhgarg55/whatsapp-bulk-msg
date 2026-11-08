@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { ActiveView, DealerRow, CampaignImage } from '../types';
+import { PWAInstallButton } from './PWAInstallButton';
 import {
   FileSpreadsheet,
   Send,
@@ -106,6 +107,8 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
               <FolderOpen className="w-4 h-4 text-slate-300" />
               Resume from File
             </button>
+
+            <PWAInstallButton className="py-2.5 px-4 rounded-xl font-medium shadow-none" />
           </div>
         </div>
       </div>

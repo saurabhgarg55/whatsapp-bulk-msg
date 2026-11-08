@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E284A"/>
+      <stop offset="100%" stop-color="#071526"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DFBA63"/>
+      <stop offset="100%" stop-color="#B38933"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)"/>
+  <!-- Gold Border Accent -->
+  <rect x="24" y="24" width="464" height="464" rx="80" fill="none" stroke="url(#goldGrad)" stroke-width="8" opacity="0.85"/>
+  <!-- Inner Troika Emblem -->
+  <g filter="url(#shadow)">
+    <!-- Elegant Serif 'T' Monogram -->
+    <path d="M 140 160 L 372 160 C 382 160 390 168 390 178 L 390 195 C 390 205 382 213 372 213 L 286 213 L 286 380 C 286 390 278 398 268 398 L 244 398 C 234 398 226 390 226 380 L 226 213 L 140 213 C 130 213 122 205 122 195 L 122 178 C 122 168 130 160 140 160 Z" fill="url(#goldGrad)"/>
+    <!-- Small Troika Star Accent -->
+    <circle cx="256" cy="430" r="10" fill="#DFBA63"/>
+  </g>
+</svg>

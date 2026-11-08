@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { usePWAInstall } from '../hooks/usePWAInstall';
-import { Download, Monitor, CheckCircle, HelpCircle, X } from 'lucide-react';
+import { Download, Monitor, CheckCircle, X } from 'lucide-react';
 
 export const PWAInstallButton: React.FC<{ className?: string }> = ({ className = '' }) => {
   const { isInstallable, isInstalled, isIOS, install } = usePWAInstall();
   const [showManualGuide, setShowManualGuide] = useState(false);
   const [showIOSGuide, setShowIOSGuide] = useState(false);
 
-  // If already running as an installed desktop or mobile app, show a subtle status or hide
+  // If already running as an installed desktop or mobile app, show a subtle badge
   if (isInstalled) {
     return (
       <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-emerald-800 bg-emerald-50 border border-emerald-200/80 rounded-lg ${className}`}>
@@ -120,14 +120,14 @@ export const PWAInstallButton: React.FC<{ className?: string }> = ({ className =
                 </p>
                 <ol className="list-decimal list-inside space-y-1 text-slate-700 pl-1">
                   <li>Look at the right side of your <strong>Chrome address bar</strong> (where the URL is).</li>
-                  <li>Click the <strong>Install icon</strong> (an icon showing a computer screen with an arrow, or an install badge).</li>
-                  <li>Or click the <strong>three dots (⋮)</strong> in Chrome at the top right → select <strong>"Install Troika WhatsApp Sender..."</strong> or <strong>"Save and share" → "Install page as app"</strong>.</li>
-                  <li>Click <strong>Install</strong> to add it to your Windows Desktop & Start Menu.</li>
+                  <li>Click the <strong>Install icon</strong> (computer icon with an arrow, or an install prompt).</li>
+                  <li>Or click the <strong>three dots (⋮)</strong> in Chrome → select <strong>"Install Troika WhatsApp Sender..."</strong> or <strong>"Save and share" → "Install page as app"</strong>.</li>
+                  <li>Click <strong>Install</strong> to place an icon directly on your Desktop & Start Menu!</li>
                 </ol>
               </div>
 
               <p className="text-[11px] text-slate-500 italic">
-                Once installed, Troika opens in its own clean window without browser toolbars, exactly like a native Windows desktop program.
+                Once installed, Troika opens in its own clean window without browser toolbars, like a native Windows application.
               </p>
             </div>
 
